@@ -233,7 +233,7 @@ let s:normal_items = [
             \ "ColorColumn", "Comment", "Constant", "Cursor", "CursorColumn",
             \ "CursorIM", "CursorLine", "CursorLineNr", "DiffAdd", "DiffChange",
             \ "DiffDelete", "Directory", "Error", "ErrorMsg", "Identifier",
-            \ "IncSearch", "LineNr", "MatchParen", "ModeMsg", "MoreMsg",
+            \ "IncSearch", "LineNr", "ModeMsg", "MoreMsg",
             \ "NonText", "Pmenu", "PmenuSbar", "PmenuSel",
             \ "PmenuThumb", "PreProc", "Question", "Search", "SignColumn",
             \ "Special", "SpecialKey", "Statement", "StatusLineNC", "TabLine",
@@ -243,7 +243,7 @@ let s:normal_items = [
 
 let s:bold_items = [
             \ "DiffText", "FoldColumn", "Folded", "StatusLine", "TabLineSel",
-            \ "Title",
+            \ "Title","MatchParen",
             \ ]
 
 let s:underline_items = [
@@ -292,7 +292,7 @@ if s:style == "light"
     endif
 else
     if s:contrast_bg == "high"
-        hi Normal                       guibg=#121212
+        hi Normal                       guibg=#000000
     else
         hi Normal                       guibg=#303030
     endif
@@ -415,7 +415,7 @@ else
     hi CursorColumn                 guibg=#444444
     hi CursorLine                   guibg=#444444
     hi IncSearch    guifg=bg
-    hi MatchParen   guifg=bg
+    "hi MatchParen   guifg=bg
     hi Search       guifg=bg
     hi Visual                       guibg=#005f87
     if s:contrast == "low"
@@ -423,7 +423,7 @@ else
         hi CursorIM                     guibg=#5f87af
         hi Error        guifg=#d75f5f   guibg=#870000
         hi IncSearch                    guibg=#00afaf
-        hi MatchParen                   guibg=#87af5f
+        "hi MatchParen                   guibg=#87af5f
         hi Search                       guibg=#d78700
         hi Todo         guifg=#afaf00   guibg=#5f5f00
     elseif s:contrast == "high"
@@ -431,7 +431,7 @@ else
         hi CursorIM                     guibg=#afd7ff
         hi Error        guifg=#ffafaf   guibg=#af0000
         hi IncSearch                    guibg=#87ffff
-        hi MatchParen                   guibg=#d7ff87
+        "hi MatchParen                   guibg=#d7ff87
         hi Search                       guibg=#ffaf5f
         hi Todo         guifg=#ffff87   guibg=#87875f
     else
@@ -439,7 +439,7 @@ else
         hi CursorIM                     guibg=#87afd7
         hi Error        guifg=#ff8787   guibg=#870000
         hi IncSearch                    guibg=#5fd7d7
-        hi MatchParen                   guibg=#afd75f
+        "hi MatchParen                   guibg=#afd75f
         hi Search                       guibg=#d78700
         hi Todo         guifg=#d7d75f   guibg=#5f5f00
     endif
@@ -533,8 +533,8 @@ if s:style == "light"
 else
     hi ColorColumn                  guibg=#87875f
     hi CursorLineNr guifg=#626262   guibg=#444444
-    hi FoldColumn                   guibg=#4e4e4e
-    hi Folded                       guibg=#4e4e4e
+    hi FoldColumn                   guibg=#121212
+    hi Folded                       guibg=#121212
     hi LineNr       guifg=#626262   guibg=#444444
     hi PmenuSel                     guibg=#005f87
     hi SignColumn                   guibg=#4e4e4e
